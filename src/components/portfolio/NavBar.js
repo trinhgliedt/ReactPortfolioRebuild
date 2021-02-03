@@ -9,6 +9,7 @@ import {
   makeStyles,
   Container,
 } from "@material-ui/core";
+import Hidden from "@material-ui/core/Hidden";
 import { Home } from "@material-ui/icons";
 
 import NavLinks from "./NavLinks";
@@ -40,20 +41,24 @@ const NavBar = () => {
             <IconButton edge="start" color="inherit" aria-label="home">
               <Home fontSize="large" />
             </IconButton>
-            <List
-              component="nav"
-              aria-labelledby="main navigation"
-              className={classes.navDisplayFlex}
-            >
-              {NavLinks.map(({ title, path }) => (
-                <a href={path} key={title} className={classes.linkText}>
-                  <ListItem button>
-                    <ListItemText primary={title} />
-                  </ListItem>
-                </a>
-              ))}
-            </List>
-            <NavbarSideDrawer navLinks={NavLinks} />
+            <Hidden smDown>
+              <List
+                component="nav"
+                aria-labelledby="main navigation"
+                className={classes.navDisplayFlex}
+              >
+                {NavLinks.map(({ title, path }) => (
+                  <a href={path} key={title} className={classes.linkText}>
+                    <ListItem button>
+                      <ListItemText primary={title} />
+                    </ListItem>
+                  </a>
+                ))}
+              </List>
+            </Hidden>
+            <Hidden mdUp>
+              <NavbarSideDrawer navLinks={NavLinks} />
+            </Hidden>
           </Container>
         </Toolbar>
       </AppBar>
