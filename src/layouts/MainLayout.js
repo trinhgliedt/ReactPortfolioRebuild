@@ -1,9 +1,10 @@
 import React from "react";
+import NavBar from "./../components/portfolio/NavBar";
 
 const MainLayout = (props) => {
   return (
     <div>
-      <h1>Main Layout</h1>
+      <NavBar />
       {props.children}
     </div>
   );
