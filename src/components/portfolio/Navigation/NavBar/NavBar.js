@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import myPic from "./../../../../assets/profileThumbnail.jpg";
 
 // icons
 import {
@@ -15,15 +15,18 @@ import {
   iconWrap,
 } from "./../Icons";
 
-const navLinkStyle = "px-lg-5 px-md-4 d-flex align-items-end py-2";
+const navLinkStyle =
+  "px-lg-4 px-md-3 px-sm-3 d-flex align-items-end justify-content-center py-2";
 const NavigationBar = () => {
   return (
-    <div>
+    <div className="container">
       <Navbar collapseOnSelect expand="md">
-        <Navbar.Brand href="/">{homeIcon()}</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img className="rounded-circle" src={myPic} width="40px"></img>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="mr-auto mr-0 col d-flex justify-content-around">
             <Nav.Link className={navLinkStyle} href="/">
               {iconWrap(aboutMeIcon())} About Me
             </Nav.Link>
