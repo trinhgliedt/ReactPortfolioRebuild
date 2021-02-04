@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   AppBar,
   Toolbar,
@@ -10,7 +12,7 @@ import {
   Container,
 } from "@material-ui/core";
 import Hidden from "@material-ui/core/Hidden";
-import { Home } from "@material-ui/icons";
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 
 import NavLinks from "./NavLinks";
 import NavbarSideDrawer from "./NarBarSideDrawer";
@@ -39,7 +41,9 @@ const NavBar = () => {
         <Toolbar>
           <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
             <IconButton edge="start" color="inherit" aria-label="home">
-              <Home fontSize="large" />
+              <Link to="/">
+                <HomeOutlinedIcon fontSize="large" />
+              </Link>
             </IconButton>
             <Hidden smDown>
               <List
@@ -48,11 +52,11 @@ const NavBar = () => {
                 className={classes.navDisplayFlex}
               >
                 {NavLinks.map(({ title, path }) => (
-                  <a href={path} key={title} className={classes.linkText}>
+                  <Link to={path} key={title} className={classes.linkText}>
                     <ListItem button>
                       <ListItemText primary={title} />
                     </ListItem>
-                  </a>
+                  </Link>
                 ))}
               </List>
             </Hidden>
