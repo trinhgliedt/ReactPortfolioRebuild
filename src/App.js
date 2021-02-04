@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-
+import { Switch, Route, Redirect } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 // layouts
 import MainLayout from "./layouts/MainLayout";
 
@@ -26,6 +26,7 @@ function App() {
           )}
         />
         <Route
+          exact
           path="/skills"
           render={() => (
             <MainLayout>
@@ -34,6 +35,7 @@ function App() {
           )}
         />
         <Route
+          exact
           path="/work"
           render={() => (
             <MainLayout>
@@ -42,6 +44,7 @@ function App() {
           )}
         />
         <Route
+          exact
           path="/resume"
           render={() => (
             <MainLayout>
@@ -50,6 +53,7 @@ function App() {
           )}
         />
         <Route
+          exact
           path="/contact"
           render={() => (
             <MainLayout>
@@ -57,6 +61,8 @@ function App() {
             </MainLayout>
           )}
         />
+
+        <Redirect to="/" />
       </Switch>
     </div>
   );

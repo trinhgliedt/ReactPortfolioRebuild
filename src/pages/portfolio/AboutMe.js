@@ -3,7 +3,7 @@ import React from "react";
 const AboutMe = () => {
   return (
     <div>
-      <h2> About Me </h2>
+      <h2 className="text-danger"> About Me </h2>
       <p>
         I am a solution seeker who fell in love with coding, and I have an
         undying curiosity about all things tech. I love tackling complex
