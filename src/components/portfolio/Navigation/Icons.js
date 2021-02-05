@@ -1,26 +1,11 @@
-export function homeIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
-      fill="currentColor"
-      className="bi bi-house-door"
-      viewBox="0 0 20 20"
-    >
-      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
-    </svg>
-  );
-}
-
-export function aboutMeIcon() {
+function personIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
       fill="currentColor"
-      class="bi bi-person"
+      className="bi bi-person"
       viewBox="0 0 16 16"
     >
       <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
@@ -28,14 +13,14 @@ export function aboutMeIcon() {
   );
 }
 
-export function skillsIcon() {
+function gearIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
       fill="currentColor"
-      class="bi bi-gear"
+      className="bi bi-gear"
       viewBox="0 0 16 16"
     >
       <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
@@ -44,14 +29,14 @@ export function skillsIcon() {
   );
 }
 
-export function myWorkIcon() {
+function eyeIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
       fill="currentColor"
-      class="bi bi-eye"
+      className="bi bi-eye"
       viewBox="0 0 16 16"
     >
       <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
@@ -60,14 +45,14 @@ export function myWorkIcon() {
   );
 }
 
-export function resumeIcon() {
+function docIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
       fill="currentColor"
-      class="bi bi-file-earmark-person"
+      className="bi bi-file-earmark-person"
       viewBox="0 0 16 16"
     >
       <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -76,14 +61,14 @@ export function resumeIcon() {
   );
 }
 
-export function contactMeIcon() {
+function mailIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
       fill="currentColor"
-      class="bi bi-envelope"
+      className="bi bi-envelope"
       viewBox="0 0 16 16"
     >
       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
@@ -91,6 +76,30 @@ export function contactMeIcon() {
   );
 }
 
-export function iconWrap(icon) {
+// export function HamburgerIcon() {
+//   return (
+//     <svg
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="16"
+//       height="16"
+//       fill="currentColor"
+//       className="bi bi-justify"
+//       viewBox="0 0 16 16"
+//     >
+//       <path
+//         fill-rule="evenodd"
+//         d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+//       />
+//     </svg>
+//   );
+// }
+
+function iconWrap(icon) {
   return <span className="mr-2 mb-1">{icon}</span>;
 }
+
+export const aboutMeIcon = iconWrap(personIcon());
+export const skillsIcon = iconWrap(gearIcon());
+export const myWorkIcon = iconWrap(eyeIcon());
+export const resumeIcon = iconWrap(docIcon());
+export const contactMeIcon = iconWrap(mailIcon());

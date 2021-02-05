@@ -1,55 +1,46 @@
 import React from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import {
+  aboutMeIcon,
+  skillsIcon,
+  myWorkIcon,
+  resumeIcon,
+  contactMeIcon,
+} from "./../Icons";
+import "./styles.scss";
 
-import NavItem from "./NavItem/NavItem";
+const navLinks = [
+  { title: "About me", path: "/", icon: aboutMeIcon },
+  { title: "Skills", path: "/skills", icon: skillsIcon },
+  { title: "My work", path: "/work", icon: myWorkIcon },
+  { title: "Resume", path: "/resume", icon: resumeIcon },
+  { title: "Contact", path: "/contact", icon: contactMeIcon },
+];
 
-const Nav = styled.nav`
-  display: flex;
-  margin-top: ${(props) => (props.mobile ? "-6rem" : null)};
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  flex-direction: ${(props) => (props.mobile ? "column" : "row")};
-  align-items: center;
-  height: 100%;
-`;
-
-const NavItems = ({ mobile, clicked, loggedIn }) => {
-  let links;
-  if (loggedIn.uid) {
-    links = (
-      <Ul mobile={mobile}>
-        <NavItem mobile={mobile} clicked={clicked} link="/">
-          About Me
-        </NavItem>
-        <NavItem mobile={mobile} clicked={clicked} link="/skills">
-          Skills
-        </NavItem>
-        <NavItem mobile={mobile} clicked={clicked} link="/work">
-          My Work
-        </NavItem>
-        <NavItem mobile={mobile} clicked={clicked} link="/resume">
-          Resume
-        </NavItem>
-        <NavItem mobile={mobile} clicked={clicked} link="/contact">
-          Contact Me
-        </NavItem>
-      </Ul>
-    );
+const NavItems = ({ displayDirection, opened }) => {
+  var containerStyles;
+  if (displayDirection === "vertical" && opened === true) {
+    containerStyles = "navItems d-block";
+  } else if (displayDirection === "vertical" && opened === false) {
+    containerStyles = "d-none";
   } else {
-    links = (
-      <Ul mobile={mobile}>
-        <NavItem mobile={mobile} clicked={clicked} link="/login">
-          Login
-        </NavItem>
-        <NavItem mobile={mobile} clicked={clicked} link="/signup">
-          Signup
-        </NavItem>
-      </Ul>
-    );
+    containerStyles = "navItems d-flex justify-content-around col-11";
   }
-  return <Nav mobile={mobile}>{links}</Nav>;
+  const itemStyles =
+    displayDirection === "vertical"
+      ? "py-2 d-block text-center"
+      : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center py-2";
+  return (
+    <div className={containerStyles}>
+      {navLinks.map((navItem, index) => {
+        return (
+          <Link className={itemStyles} key={index} to={navItem.path}>
+            {navItem.icon} {navItem.title}
+          </Link>
+        );
+      })}
+    </div>
+  );
 };
 
 export default NavItems;
