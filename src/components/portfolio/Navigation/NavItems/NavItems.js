@@ -20,7 +20,7 @@ const navLinks = [
 const NavItems = ({ displayDirection, opened }) => {
   var containerStyles;
   if (displayDirection === "vertical" && opened === true) {
-    containerStyles = "navItems d-block";
+    containerStyles = "navItems d-block py-3";
   } else if (displayDirection === "vertical" && opened === false) {
     containerStyles = "d-none";
   } else {
@@ -28,8 +28,8 @@ const NavItems = ({ displayDirection, opened }) => {
   }
   const itemStyles =
     displayDirection === "vertical"
-      ? "py-2 d-block text-center"
-      : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center py-2";
+      ? "py-2 d-block text-center rotate"
+      : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center py-2 rotate";
   return (
     <div className={containerStyles}>
       {navLinks.map((navItem, index) => {

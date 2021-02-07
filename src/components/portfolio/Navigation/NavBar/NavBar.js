@@ -6,7 +6,7 @@ import SideDrawer from "./../SideDrawer/SideDrawer";
 const NavigationBar = () => {
   return (
     <div>
-      <div className="container justify-content-between d-none d-xs-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
+      <div className="container p-0 justify-content-between d-none d-xs-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
         {logo()}
         <NavItems />
       </div>

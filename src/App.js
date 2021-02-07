@@ -14,7 +14,7 @@ import ContactMe from "./pages/portfolio/ContactMe";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App p-0">
       <Switch>
         <Route
           exact
