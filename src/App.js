@@ -22,8 +22,10 @@ function App() {
 
   return (
     <>
+      <div className="color-Bg"></div>
+      <div className="polygon-Bg"></div>
       <div className="App p-0">
-        <Switch style={{ position: "relative", zIndex: "2" }}>
+        <Switch>
           <Route
             exact
             path="/"
@@ -73,8 +75,6 @@ function App() {
           <Redirect to="/" />
         </Switch>
       </div>
-      <div className="polygon-Bg"></div>
-      <div className="color-Bg"></div>
     </>
   );
 }

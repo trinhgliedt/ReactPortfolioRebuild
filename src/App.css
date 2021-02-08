@@ -16,36 +16,39 @@
 .polygon-Bg {
   height: 100%;
   width: 100%;
-  z-index: -1;
+
   background-image: url("./assets//bgImg.jpg");
   position: absolute;
   z-index: 1;
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
-  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 53%, 0 100%, 0% 75%, 0 25%);
-  clip-path: polygon(50% 0%, 100% 0, 100% 53%, 0 100%, 0% 75%, 0 25%);
+  clip-path: polygon(48% 0, 100% 0, 100% 50%, 0 100%, 0 18%);
+  z-index: -1;
 }
 
 .color-Bg {
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 1;
   background-color: #07337e;
+  z-index: -2;
 }
 .App {
-  color: white;
-  background: none;
+  color: rgb(214, 209, 209);
+  /* background-color: #07337e00; */
+}
+
+.App::before {
+  content: "";
+  background-color: #00e5ff;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.05;
 }
 
 .main-title {
-  z-index: 4;
   font-weight: 700;
   color: var(--color-cyan);
   font-family: "Caveat", cursive;
