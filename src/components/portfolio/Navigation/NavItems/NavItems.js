@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   aboutMeIcon,
@@ -9,12 +9,12 @@ import {
 } from "./../Icons";
 import "./styles.scss";
 
-const navLinks = [
-  { title: "About me", path: "/", icon: aboutMeIcon },
-  { title: "Skills", path: "/skills", icon: skillsIcon },
-  { title: "My work", path: "/work", icon: myWorkIcon },
-  { title: "Resume", path: "/resume", icon: resumeIcon },
-  { title: "Contact", path: "/contact", icon: contactMeIcon },
+var navLinks = [
+  { title: "About me", path: "/", icon: aboutMeIcon, active: true },
+  { title: "Skills", path: "/skills", icon: skillsIcon, active: false },
+  { title: "My work", path: "/work", icon: myWorkIcon, active: false },
+  { title: "Resume", path: "/resume", icon: resumeIcon, active: false },
+  { title: "Contact", path: "/contact", icon: contactMeIcon, active: false },
 ];
 
 const NavItems = ({ displayDirection, opened }) => {
@@ -24,17 +24,36 @@ const NavItems = ({ displayDirection, opened }) => {
   } else if (displayDirection === "vertical" && opened === false) {
     containerStyles = "d-none";
   } else {
-    containerStyles = "navItems d-flex justify-content-around col-11";
+    containerStyles = "navItems d-flex justify-content-between col-11";
   }
+
+  useEffect(() => {});
   const itemStyles =
     displayDirection === "vertical"
-      ? "py-2 d-block text-center rotate"
-      : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center py-2 rotate";
+      ? "d-block text-center"
+      : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center ";
+
+  const handleClick = (index) => {
+    navLinks.map((link) => {
+      link.active = false;
+      return link;
+    });
+    navLinks[index].active = true;
+  };
   return (
     <div className={containerStyles}>
       {navLinks.map((navItem, index) => {
         return (
-          <Link className={itemStyles} key={index} to={navItem.path}>
+          <Link
+            className={
+              "hover-effects py-2 " +
+              itemStyles +
+              (navItem.active && " text-success")
+            }
+            key={index}
+            to={navItem.path}
+            onClick={(e) => handleClick(index)}
+          >
             {navItem.icon} {navItem.title}
           </Link>
         );

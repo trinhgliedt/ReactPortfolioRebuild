@@ -1,21 +1,20 @@
 .navItems {
   text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Shadows Into Light", cursive;
   a {
     text-decoration: none;
     color: inherit;
   }
 }
 
-.rotate:hover {
-  transition-delay: 0.5s;
-  transform: rotateY(360deg);
-  transition: 2.5s;
+.hover-effects:hover {
+  transition-delay: 0.2s;
+  transform: scale(1.1);
+  transition: 1s;
+  color: var(--color-teal);
 }
 
-.drawer {
-  // position: fixed;
-  // background-color: var(--color-teal);
-  // color: white;
-  // min-height: 60vh;
-  // margin: -3%;
+.text-teal {
+  color: var(--color-teal);
 }

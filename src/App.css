@@ -2,6 +2,14 @@
   /* outline: 1px solid grey; */
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
 :root {
-  --color-teal: #009688;
+  --color-teal: #03bd6f;
+}
+
+.App {
+  background-color: rgb(61, 60, 60);
+  color: white;
+  min-height: 100vh;
 }
