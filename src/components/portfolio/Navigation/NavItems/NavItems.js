@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   aboutMeIcon,
@@ -20,17 +20,15 @@ var navLinks = [
 const NavItems = ({ displayDirection, opened }) => {
   var containerStyles;
   if (displayDirection === "vertical" && opened === true) {
-    containerStyles = "navItems d-block py-3";
+    containerStyles = "navItems d-block py-3 px-5";
   } else if (displayDirection === "vertical" && opened === false) {
     containerStyles = "d-none";
   } else {
     containerStyles = "navItems d-flex justify-content-between col-11";
   }
-
-  useEffect(() => {});
   const itemStyles =
     displayDirection === "vertical"
-      ? "d-block text-center"
+      ? "d-block text-center px-0 mx-5"
       : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center ";
 
   const handleClick = (index) => {
@@ -48,7 +46,7 @@ const NavItems = ({ displayDirection, opened }) => {
             className={
               "hover-effects py-2 " +
               itemStyles +
-              (navItem.active && " text-success")
+              (navItem.active && " borderLink")
             }
             key={index}
             to={navItem.path}

@@ -1,15 +1,56 @@
 * {
   /* outline: 1px solid grey; */
+  z-index: 2;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+/* font-family: "Shadows Into Light", cursive; */
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+/* font-family: "Caveat", cursive; */
 
 :root {
   --color-teal: #03bd6f;
+  --color-cyan: #00e5ff;
+}
+.polygon-Bg {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: url("./assets//bgImg.jpg");
+  position: absolute;
+  z-index: 1;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 53%, 0 100%, 0% 75%, 0 25%);
+  clip-path: polygon(50% 0%, 100% 0, 100% 53%, 0 100%, 0% 75%, 0 25%);
 }
 
+.color-Bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #07337e;
+}
 .App {
-  background-color: rgb(61, 60, 60);
   color: white;
-  min-height: 100vh;
+  background: none;
+}
+
+.main-title {
+  z-index: 4;
+  font-weight: 700;
+  color: var(--color-cyan);
+  font-family: "Caveat", cursive;
+}
+
+.z2 {
+  z-index: 2;
 }

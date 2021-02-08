@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "./../Logo";
+import logo from "../Logo/Logo";
 import NavItems from "./../../Navigation/NavItems/NavItems";
 import SideDrawer from "./../SideDrawer/SideDrawer";
 const NavigationBar = () => {
