@@ -1,21 +1,76 @@
 import React, { useState } from "react";
-import logo from "../Logo/Logo";
+import styled from "styled-components";
+
+import Logo from "../Logo/Logo";
+import NavItems from "../NavItems/NavItems";
 import Hamburger from "./Hamburger";
-import NavItems from "./../NavItems/NavItems";
+
+const FixedWrapper = styled.header`
+  position: fixed;
+  background-color: var(--color-mainDark);
+  padding: 0rem 2rem;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  display: none;
+
+  @media only screen and (max-width: 37.5em) {
+    display: flex;
+  }
+  @media only screen and (max-width: 25em) {
+    display: flex;
+  }
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Menu = styled.div`
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  height: 100vh;
+  background-color: var(--color-mainDark);
+  visibility: ${(props) => (props.opened ? "visibile" : "hidden")};
+  transform: translateY(${(props) => (props.opened ? "0%" : "-100%")});
+  transition: all 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 10;
+  display: none;
+
+  @media only screen and (max-width: 37.5em) {
+    display: flex;
+  }
+  @media only screen and (max-width: 25em) {
+    display: flex;
+  }
+`;
 
 const SideDrawer = () => {
   const [isOpened, setIsOpened] = useState(false);
-
   return (
-    <div className="container px-2 d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
-      <div className="container d-flex justify-content-between p-0">
-        {logo()}
-        <Hamburger opened={isOpened} clicked={() => setIsOpened(!isOpened)} />
-      </div>
-      <div className="container p-0">
-        <NavItems displayDirection="vertical" opened={isOpened} />
-      </div>
-    </div>
+    <>
+      <FixedWrapper>
+        <Wrapper>
+          <Logo />
+          <Hamburger opened={isOpened} clicked={() => setIsOpened(!isOpened)} />
+        </Wrapper>
+      </FixedWrapper>
+      <Menu opened={isOpened}>
+        <NavItems mobile clicked={() => setIsOpened(false)} />
+      </Menu>
+    </>
   );
 };
 

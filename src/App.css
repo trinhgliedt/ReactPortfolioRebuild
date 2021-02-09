@@ -25,7 +25,7 @@
 }
 
 .color-Bg {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   position: absolute;
   background-color: #07337e;
@@ -33,19 +33,6 @@
 }
 .App {
   color: rgb(214, 209, 209);
-  /* background-color: #07337e00; */
-}
-
-.App::before {
-  content: "";
-  background-color: #00e5ff;
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.05;
 }
 
 .main-title {

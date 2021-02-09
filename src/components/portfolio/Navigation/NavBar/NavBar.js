@@ -1,8 +1,8 @@
 import React from "react";
 
 import logo from "../Logo/Logo";
-import NavItems from "./../../Navigation/NavItems/NavItems";
-import SideDrawer from "./../SideDrawer/SideDrawer";
+import NavItems from "../NavItems/NavItems";
+import SideDrawer from "../SideDrawer/SideDrawer";
 const NavigationBar = () => {
   return (
     <div>

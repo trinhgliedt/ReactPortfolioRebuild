@@ -1,63 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  aboutMeIcon,
-  skillsIcon,
-  myWorkIcon,
-  resumeIcon,
-  contactMeIcon,
-} from "./../Icons";
-import "./styles.scss";
+import styled from "styled-components";
 
-var navLinks = [
-  { title: "About me", path: "/", icon: aboutMeIcon, active: true },
-  { title: "Skills", path: "/skills", icon: skillsIcon, active: false },
-  { title: "My work", path: "/work", icon: myWorkIcon, active: false },
-  { title: "Resume", path: "/resume", icon: resumeIcon, active: false },
-  { title: "Contact", path: "/contact", icon: contactMeIcon, active: false },
-];
+import NavItem from "./NavItem/NavItem";
 
-const NavItems = ({ displayDirection, opened }) => {
-  var containerStyles;
-  if (displayDirection === "vertical" && opened === true) {
-    containerStyles = "navItems d-block py-3 px-5";
-  } else if (displayDirection === "vertical" && opened === false) {
-    containerStyles = "d-none";
-  } else {
-    containerStyles = "navItems d-flex justify-content-between col-11";
-  }
-  const itemStyles =
-    displayDirection === "vertical"
-      ? "d-block text-center px-0 mx-5"
-      : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center ";
+const Nav = styled.nav`
+  display: flex;
+  margin-top: ${(props) => (props.mobile ? "-6rem" : null)};
+`;
 
-  const handleClick = (index) => {
-    navLinks.map((link) => {
-      link.active = false;
-      return link;
-    });
-    navLinks[index].active = true;
-  };
-  return (
-    <div className={containerStyles}>
-      {navLinks.map((navItem, index) => {
-        return (
-          <Link
-            className={
-              "hover-effects py-2 " +
-              itemStyles +
-              (navItem.active && " borderLink")
-            }
-            key={index}
-            to={navItem.path}
-            onClick={(e) => handleClick(index)}
-          >
-            {navItem.icon} {navItem.title}
-          </Link>
-        );
-      })}
-    </div>
+const Ul = styled.ul`
+  display: flex;
+  flex-direction: ${(props) => (props.mobile ? "column" : "row")};
+  align-items: center;
+  height: 100%;
+`;
+
+const NavItems = ({ mobile, clicked, loggedIn }) => {
+  let links;
+  links = (
+    <Ul mobile={mobile}>
+      <NavItem mobile={mobile} clicked={clicked} link="/">
+        About me
+      </NavItem>
+      <NavItem mobile={mobile} clicked={clicked} link="/skills">
+        Skills
+      </NavItem>
+      <NavItem mobile={mobile} clicked={clicked} link="/work">
+        My work
+      </NavItem>
+      <NavItem mobile={mobile} clicked={clicked} link="/resume">
+        Resume
+      </NavItem>
+      <NavItem mobile={mobile} clicked={clicked} link="/contact">
+        Contact me
+      </NavItem>
+    </Ul>
   );
+  return <Nav mobile={mobile}>{links}</Nav>;
 };
 
 export default NavItems;
