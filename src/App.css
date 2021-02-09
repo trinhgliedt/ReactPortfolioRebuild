@@ -1,6 +1,12 @@
+:root {
+  --color-teal: #03bd6f;
+  --color-cyan: #00e5ff;
+}
+
 * {
   /* outline: 1px solid grey; */
   z-index: 2;
+  transition: 1s ease-in-out;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
@@ -9,10 +15,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 /* font-family: "Caveat", cursive; */
 
-:root {
-  --color-teal: #03bd6f;
-  --color-cyan: #00e5ff;
-}
 .polygon-Bg {
   height: 100%;
   width: 100%;
@@ -20,7 +22,7 @@
   background-image: url("./assets//bgImg.jpg");
   position: absolute;
   z-index: 1;
-  clip-path: polygon(48% 0, 100% 0, 100% 50%, 0 100%, 0 18%);
+  clip-path: polygon(80% 0, 100% 0, 100% 50%, 55% 100%, 0 100%, 0 12%);
   z-index: -1;
 }
 

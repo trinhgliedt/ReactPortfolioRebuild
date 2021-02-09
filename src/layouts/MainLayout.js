@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBar from "./../components/portfolio/Navigation/NavBar/NavBar";
+import NavigationBar from "../components/portfolio/Navigation/NavBar/NavBar";
 
 const MainLayout = (props) => {
   return (

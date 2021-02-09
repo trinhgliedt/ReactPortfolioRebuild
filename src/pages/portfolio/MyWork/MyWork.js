@@ -3,7 +3,7 @@ import React from "react";
 const MyWork = () => {
   return (
     <div className="container">
-      <h1>My work</h1>
+      <h1 className="text-center main-title py-3">My work</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

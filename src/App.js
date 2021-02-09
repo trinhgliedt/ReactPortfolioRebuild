@@ -1,4 +1,5 @@
 import "./App.css";
+import "./components/portfolio/Background/styles.css";
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <>
-      <div className="color-Bg"></div>
+      <div className="color-Bg blinkBg"></div>
       <div className="polygon-Bg"></div>
       <div className="App p-0">
         <Switch>

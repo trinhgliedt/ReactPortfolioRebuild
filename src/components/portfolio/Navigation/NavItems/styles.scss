@@ -13,11 +13,15 @@
   transition-delay: 0.1s;
   transform: scale(1.08);
   font-weight: 900;
-  transition: 1s;
-  color: var(--color-teal);
+  transition: 0.5s;
+  color: var(--color-cyan);
 }
 
 .borderLink {
-  border-radius: 60% 30%;
-  border: 2px solid var(--color-cyan);
+  border-bottom: 2px solid var(--color-cyan);
+}
+
+.px-lg {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
