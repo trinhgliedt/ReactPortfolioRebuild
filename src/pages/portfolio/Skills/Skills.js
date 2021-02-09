@@ -24,40 +24,42 @@ import css from "./../../../assets/techIcons/CSS.png";
 import materialUI from "./../../../assets/techIcons/materialUI.png";
 
 import Skill from "./../../../components/portfolio/Skill/Skill";
-const sectionHeadStyle = "text-center bg-success rounded py-2 mt-3";
+const sectionHeadStyle =
+  "text-center border border-warning border-left-0 border-right-0 border-top-0 rounded py-2 mt-3";
 
 const Skills = () => {
   return (
     <div className="container">
       <h1 className="text-center main-title py-3">Technical Skills</h1>
-      <h3 className={sectionHeadStyle}>Languages</h3>
+      <h4 className={sectionHeadStyle}>Languages</h4>
       <div className="row">
         <Skill name="Javascript" icon={javascript} />
         <Skill name="Python" icon={python} />
         <Skill name="Java" icon={java} />
       </div>
-      <h3 className={sectionHeadStyle}>Frameworks</h3>
+      <h4 className={sectionHeadStyle}>Frameworks</h4>
       <div className="row">
         <Skill name="ReactJS" icon={react} />
         <Skill name="ExpressJS" icon={express} />
         <Skill name="Django" icon={django} />
         <Skill name="Spring Boot" icon={springBoot} />
       </div>
-      <h3 className={sectionHeadStyle}>Databases</h3>
+      <h4 className={sectionHeadStyle}>Databases</h4>
       <div className="row">
         <Skill name="MySQL" icon={mySQL} />
         <Skill name="SQLite" icon={SQLite} />
         <Skill name="MongoDB" icon={mongoDB} />
         <Skill name="Google Cloud DB" icon={firebase} />
       </div>
-      <h3 className={sectionHeadStyle}>Cloud Services</h3>
+      <h4 className={sectionHeadStyle}>Cloud Services</h4>
       <div className="row">
         <Skill name="Google Firebase" icon={firebase} />
         <Skill name="Amazon Web Service" icon={aws} />
       </div>
-      <h3 className={sectionHeadStyle}>Others</h3>
+      <h4 className={sectionHeadStyle}>Others</h4>
       <div className="row">
         <Skill name="Node.JS" icon={nodeJS} />
+        <Skill name="Redux" icon={redux} />
         <Skill name="jQuery" icon={jQuery} />
         <Skill name="HTML" icon={html} />
         <Skill name="CSS" icon={css} />

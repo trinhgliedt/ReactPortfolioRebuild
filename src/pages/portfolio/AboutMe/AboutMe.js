@@ -37,12 +37,7 @@ const AboutMe = () => {
           </p>
         </div>
         <div className="col-lg-4 d-md-none d-lg-flex flex-column justify-content-center">
-          <img
-            className="rounded"
-            src={mainPic}
-            width="100%"
-            alt="main picture"
-          />
+          <img className="rounded" src={mainPic} width="100%" alt="main" />
         </div>
       </div>
     </div>

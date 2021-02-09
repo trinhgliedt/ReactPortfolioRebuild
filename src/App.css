@@ -1,12 +1,13 @@
 :root {
   --color-teal: #03bd6f;
   --color-cyan: #00e5ff;
+  --color-darkBlue: rgba(100, 66, 12, 0.609);
 }
 
 * {
   /* outline: 1px solid grey; */
   z-index: 2;
-  transition: 1s ease-in-out;
+  transition: 0.8s ease-in-out;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
@@ -20,6 +21,7 @@
   width: 100%;
 
   background-image: url("./assets//bgImg.jpg");
+  background-repeat: repeat-y;
   position: absolute;
   z-index: 1;
   clip-path: polygon(80% 0, 100% 0, 100% 50%, 55% 100%, 0 100%, 0 12%);
@@ -34,6 +36,8 @@
   z-index: -2;
 }
 .App {
+  height: 100vh;
+  overflow: scroll;
   color: rgb(214, 209, 209);
 }
 
