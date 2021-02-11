@@ -25,8 +25,8 @@ import css from "./../../../assets/techIcons/CSS.png";
 import materialUI from "./../../../assets/techIcons/materialUI.png";
 
 import Skill from "./../../../components/portfolio/Skill/Skill";
-const sectionHeadStyle = "py-2 mt-3";
-const sectionStyle = "row tilesWrap";
+const sectionHeadStyle = "py-2 mt-3 sectionHead";
+const sectionStyle = "row justify-content-center tilesWrap";
 
 const Skills = () => {
   return (
