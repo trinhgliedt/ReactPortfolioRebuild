@@ -1,0 +1,95 @@
+.tilesWrap {
+  padding: 0;
+  margin: 50px auto;
+  list-style: none;
+  text-align: center;
+  .skillCard {
+    display: inline-block;
+    width: 20%;
+    min-width: 200px;
+    max-width: 230px;
+    padding: 80px 20px 40px;
+    position: relative;
+    vertical-align: top;
+    margin: 10px;
+    font-family: "helvetica", san-serif;
+    min-height: 25vh;
+    background: #033333a6;
+    // border: 1px solid #0c0b0b;
+    text-align: left;
+    // z-index: 4;
+  }
+  .skillCard:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: #fff;
+    transform: skew(2deg, 2deg);
+  }
+
+  .skillCard:after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .skillCard:nth-child(1):before {
+    background: #c9ffbf;
+    background: -webkit-linear-gradient(to right, #ffafbd, #c9ffbf);
+    background: linear-gradient(to right, #ffafbd, #c9ffbf);
+  }
+  .skillCard:nth-child(2):before {
+    background: #f2709c;
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+    background: linear-gradient(to right, #ff9472, #f2709c);
+  }
+  .skillCard:nth-child(3):before {
+    background: #c21500;
+    background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+    background: linear-gradient(to right, #ffc500, #c21500);
+  }
+  .skillCard:nth-child(4):before {
+    background: #fc354c;
+    background: -webkit-linear-gradient(to right, #0abfbc, #fc354c);
+    background: linear-gradient(to right, #0abfbc, #fc354c);
+  }
+  .skillCard:nth-child(5):before {
+    background: #c9ffbf;
+    background: -webkit-linear-gradient(to right, #ffafbd, #c9ffbf);
+    background: linear-gradient(to right, #ffafbd, #c9ffbf);
+  }
+  .skillCard:nth-child(6):before {
+    background: #f2709c;
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+    background: linear-gradient(to right, #ff9472, #f2709c);
+  }
+  .skillCard:nth-child(7):before {
+    background: #c21500;
+    background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+    background: linear-gradient(to right, #ffc500, #c21500);
+  }
+  .skillCard:nth-child(8):before {
+    background: #fc354c;
+    background: -webkit-linear-gradient(to right, #0abfbc, #fc354c);
+    background: linear-gradient(to right, #0abfbc, #fc354c);
+  }
+  .skillCard:nth-child(9):before {
+    background: #c9ffbf;
+    background: -webkit-linear-gradient(to right, #ffafbd, #c9ffbf);
+    background: linear-gradient(to right, #ffafbd, #c9ffbf);
+  }
+  .skillCard:nth-child(10):before {
+    background: #f2709c;
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+    background: linear-gradient(to right, #ff9472, #f2709c);
+  }
+}
+
+/* https://codepen.io/vikassingh1111/pen/xBPmbL */
