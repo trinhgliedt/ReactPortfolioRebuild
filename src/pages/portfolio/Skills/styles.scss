@@ -6,7 +6,6 @@
 
 .tilesWrap {
   padding: 0;
-  // margin: 0 auto;
   text-align: center;
   .skillCard {
     display: inline-block;
@@ -18,10 +17,8 @@
     vertical-align: top;
     margin: 10px;
     min-height: 25vh;
-    background: #0a0500f6;
+    background: #001a18;
     text-align: left;
-    h4 {
-    }
   }
   .skillCard:before {
     content: "";
@@ -32,17 +29,18 @@
     bottom: -2px;
     z-index: -1;
     background: #fff;
+    border-radius: 0.1rem;
     transform: skew(-2deg, -2deg);
   }
 
   .skillCard:after {
     content: "";
     position: absolute;
-    width: 40%;
+    width: 50%;
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(245, 241, 241, 0.123);
   }
   .skillCard:nth-child(1):before {
     background: #c9ffbf;
@@ -95,5 +93,3 @@
     background: linear-gradient(to right, #ff9472, #f2709c);
   }
 }
-
-/* https://codepen.io/vikassingh1111/pen/xBPmbL */

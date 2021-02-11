@@ -1,5 +1,5 @@
 import React from "react";
-import mainPic from "./../../../assets/mainPic.jpg";
+import mainPic from "./../../../assets/portfolio/mainPic.jpg";
 const AboutMe = () => {
   return (
     <div className="container">

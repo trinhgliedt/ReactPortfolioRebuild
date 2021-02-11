@@ -1,0 +1,44 @@
+.resumeWrap {
+  background: radial-gradient(rgb(133, 122, 102), rgba(61, 54, 54, 0.883));
+  min-height: 80vh;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  z-index: -1;
+}
+
+.resume {
+  background-color: rgb(79, 97, 96);
+  min-width: 480px;
+  min-height: 550px;
+  max-height: 600px;
+  position: relative;
+  margin-left: 10%;
+  //   z-index: 4;
+}
+
+.resume:before {
+  content: "";
+  background-color: rgba(44, 43, 43, 0.678);
+  position: absolute;
+  clip-path: polygon(
+    43% 79%,
+    48% 78%,
+    100% 70%,
+    100% 100%,
+    33.5% 91%,
+    30.8% 90%,
+    29.5% 89%,
+    28.8% 88%,
+    28.3% 87%,
+    28.4% 86%,
+    29% 85%,
+    31% 83.5%,
+    35.95% 81%,
+    36% 81%
+  );
+  top: 0px;
+  left: -100%;
+  right: 100%;
+  bottom: -0px;
+  z-index: 1;
+}

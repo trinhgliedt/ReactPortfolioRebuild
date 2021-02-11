@@ -1,0 +1,56 @@
+.projectCardLess {
+  background-color: #3a3333ed;
+  border: 1px solid rgba(0, 0, 0, 0.054);
+  a {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  .card-body {
+    .title {
+      color: var(--color-cyan);
+      text-transform: uppercase;
+      font-family: "Caveat", cursive;
+    }
+    .urlLinkStyle {
+      font-family: "Caveat", cursive;
+      font-size: large;
+    }
+  }
+}
+.projectCardMore {
+  background: radial-gradient(rgba(71, 52, 44, 0.965), rgba(61, 61, 54, 0.924));
+  box-shadow: 2em 2em 2em 2em rgba(0, 0, 0, 0.808);
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+  .card-body {
+    .title {
+      color: var(--color-cyan);
+      text-transform: uppercase;
+      font-family: "Caveat", cursive;
+    }
+    .urlLinkStyle {
+      font-family: "Caveat", cursive;
+      font-size: large;
+    }
+  }
+}
+
+.projectCardLess:after {
+  background: linear-gradient(-45deg, black 0.9em, transparent 0),
+    linear-gradient(45deg, black 0.9em, transparent 0);
+  background-position: left-bottom;
+  background-repeat: repeat-x;
+  background-size: 2em 2em;
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2em;
+}
