@@ -11,6 +11,30 @@ import {
 import dojoLogo from "../../../assets/portfolio/resume/dojoLogo.png";
 import npuLogo from "../../../assets/portfolio/resume/npuLogo.png";
 import hutechLogo from "../../../assets/portfolio/resume/hutechLogo.png";
+const Contact = ({ icon, detail }) => {
+  return (
+    <div className="contactRow">
+      {icon}
+      <span className="col-10">{detail}</span>
+    </div>
+  );
+};
+const Education = ({ schoolLogo, schoolName, year, certName }) => {
+  return (
+    <div className="eduSection">
+      <p className="font-weight-bold eduRow1">
+        <span className="eduRow1-1">
+          <img src={schoolLogo} alt="school logo" width="100%" />
+        </span>
+        <span className="eduRow1-2">
+          <span className="schoolName">{schoolName}</span>
+          <span>{year}</span>
+        </span>
+      </p>
+      <p className="eduRow2">{certName}</p>
+    </div>
+  );
+};
 
 const Resume = () => {
   return (
@@ -23,62 +47,30 @@ const Resume = () => {
               <img className="myPic" src={resumePic} width="60%" alt="resume" />
             </div>
             <p className="sectionTitle">CONTACT</p>
-            <div className="contactRow">
-              {phoneIcon}
-              <span className="col-10">+1 (510) 396-6601</span>
-            </div>
-            <div className="contactRow">
-              {emailIcon}
-              <span className="col-10">chuot2008@gmail.com</span>
-            </div>
-            <div className="contactRow">
-              {websiteIcon}
-              <span className="col-10">http://trinhgliedt.com/</span>
-            </div>
-            <div className="contactRow">
-              {addressIcon}
-              <span className="col-10">Fremont, CA, USA</span>
-            </div>
+            <Contact icon={phoneIcon} detail="+1 (510) 396-6601" />
+            <Contact icon={emailIcon} detail="chuot2008@gmail.com" />
+            <Contact icon={websiteIcon} detail="http://trinhgliedt.com/" />
+            <Contact icon={addressIcon} detail="Fremont, CA, USA" />
             <p className="sectionTitle">EDUCATION</p>
-            <div className="eduSection">
-              <p className="font-weight-bold eduRow1">
-                <img src={dojoLogo} alt="dojo logo" width="10%" />
-                <span className="eduRow1-2">
-                  <span>Coding Dojo</span>
-                  <span>2020</span>
-                </span>
-              </p>
-              <p className="ml-3">Bootcamp Certificate</p>
-            </div>
-            <div className="eduSection">
-              <p className="font-weight-bold eduRow1">
-                <span className="imgWrap">
-                  <img src={npuLogo} alt="dojo logo" width="100%" />
-                </span>
 
-                <span className="eduRow1-2">
-                  <span>Northwestern Polytechnic University</span>
-                  <span className="yearWrap">
-                    <span>2010</span>
-                  </span>
-                </span>
-              </p>
-              <p className="ml-3">Master of Business Administration</p>
-            </div>
-            <div className="eduRow">
-              <p className="font-weight-bold">
-                Northwestern Polytechnic University
-                <span>2010</span>
-              </p>
-              <p className="ml-3">Master of Business Administration</p>
-            </div>
-            <div className="eduRow">
-              <p className="font-weight-bold">
-                Ho Chi Minh University of Technology
-                <span>2007</span>
-              </p>
-              <p className="ml-3">BS Environmental Engineering</p>
-            </div>
+            <Education
+              schoolLogo={dojoLogo}
+              schoolName="Coding Dojo"
+              year="2020"
+              certName="Bootcamp Certificate"
+            />
+            <Education
+              schoolLogo={npuLogo}
+              schoolName="Northwestern Polytechnic University"
+              year="2010"
+              certName="Master of Business Administration"
+            />
+            <Education
+              schoolLogo={hutechLogo}
+              schoolName="Ho Chi Minh University of Technology"
+              year="2007"
+              certName="Master of Business Administration"
+            />
           </div>
 
           <div className="resumeRight">

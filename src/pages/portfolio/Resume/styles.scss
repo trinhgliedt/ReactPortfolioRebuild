@@ -57,12 +57,12 @@
         .myPic {
           border-radius: 50%;
           border: 1px solid var(--color-mainText);
-          margin: 0;
+          margin: 0.5rem 0;
         }
       }
 
       .sectionTitle {
-        margin: 0.5rem 0;
+        margin: 0.9rem 0;
         border-bottom: 2px solid silver;
         padding-bottom: 0.2rem;
       }
@@ -76,7 +76,7 @@
       }
       .eduSection {
         font-size: 0.7rem;
-        line-height: 0.7rem;
+        line-height: 0.8rem;
         margin-bottom: 0.3rem;
         p {
           margin: 0.1rem 0;
@@ -85,21 +85,22 @@
           padding: 0.2rem 0;
           display: flex;
           align-items: flex-start;
-          .imgWrap {
+          .eduRow1-1 {
             width: 10%;
-          }
-          .imgWrap,
-          .yearWrap {
-            display: flex;
-            align-items: baseline;
           }
           .eduRow1-2 {
             padding-left: 0.5rem;
             width: 85%;
             display: inline-flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: flex-start;
+            .schoolName {
+              color: rgb(223, 208, 208);
+            }
           }
+        }
+        .eduRow2 {
+          margin-left: 1.35rem;
         }
       }
     }
@@ -121,6 +122,3 @@
     }
   }
 }
-
-// https://www.graphicpear.com/wp-content/uploads/2017/08/Ya-resume-template-1.jpg
-// https://freefrontend.com/css-timelines/
