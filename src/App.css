@@ -3,6 +3,7 @@
   --color-cyan: #00e5ff;
   --color-darkBlue: rgba(100, 66, 12, 0.609);
   --color-deepOrgange: #ff5722;
+  --color-mainText: rgb(214, 209, 209);
   --lightGreenFont: rgb(119, 233, 42);
   --yellowFont: yellow;
   --orangeFont: orange;
@@ -49,7 +50,7 @@
 .App {
   height: 100vh;
   overflow: scroll;
-  color: rgb(214, 209, 209);
+  color: var(--color-mainText);
 }
 
 .main-title {
