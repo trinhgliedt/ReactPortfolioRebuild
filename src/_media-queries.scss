@@ -1,0 +1,53 @@
+$breakpoints: (
+  xxl: 2400px,
+  xl: 1800px,
+  lg: 1200px,
+  md: 992px,
+  sm: 768px,
+  xs: 576px,
+  xxs: 411px,
+);
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @media (max-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}
+
+// @mixin xl {
+//   @media screen and (max-width: 1400px) {
+//     @content;
+//   }
+// }
+
+// @mixin lg {
+//   @media screen and (max-width: 1200px) {
+//     @content;
+//   }
+// }
+
+// @mixin md {
+//   @media screen and (max-width: 992px) {
+//     @content;
+//   }
+// }
+
+// @mixin sm {
+//   @media screen and (max-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin xs {
+//   @media screen and (max-width: 576px) {
+//     @content;
+//   }
+// }
+
+// @mixin xxs {
+//   @media screen and (max-width: 411px) {
+//     @content;
+//   }
+// }

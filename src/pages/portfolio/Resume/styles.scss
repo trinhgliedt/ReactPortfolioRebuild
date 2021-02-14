@@ -1,251 +1,146 @@
-@media (max-width: 1206px) {
-  .resumeWrap {
-    background: radial-gradient(rgb(133, 122, 102), rgba(61, 54, 54, 0.883));
-    min-height: 80vh;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0.5rem;
-    z-index: -1;
+@import "../../../media-queries";
 
-    .resume:before {
-      content: "";
-      background-color: rgba(44, 43, 43, 0.739);
-      position: absolute;
-      clip-path: polygon(
-        43% 79%,
-        48% 78%,
-        100% 70%,
-        100% 100%,
-        33.5% 91%,
-        30.8% 90%,
-        29.5% 89%,
-        28.8% 88%,
-        28.3% 87%,
-        28.4% 86%,
-        29% 85%,
-        31% 83.5%,
-        35.95% 81%,
-        36% 81%
-      );
-      top: 0px;
-      left: -100%;
-      right: 100%;
-      bottom: -0px;
-      z-index: 1;
-    }
+.resumeWrap {
+  background: radial-gradient(rgb(133, 122, 102), rgba(61, 54, 54, 0.883));
+  min-height: 80vh;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  z-index: -1;
 
-    .resume {
-      background-color: rgb(131, 134, 134);
-      min-width: 480px;
-      max-width: 500px;
+  @include media(lg) {
+    background: none;
+  }
 
-      min-height: 550px;
-      max-height: 650px;
-      position: relative;
-      margin-left: 15%;
-      font-family: "Cabin Condensed", sans-serif;
-      display: flex;
+  .resume:before {
+    content: "";
+    background-color: rgba(44, 43, 43, 0.739);
+    position: absolute;
+    clip-path: polygon(
+      43% 79%,
+      48% 78%,
+      100% 70%,
+      100% 100%,
+      33.5% 91%,
+      30.8% 90%,
+      29.5% 89%,
+      28.8% 88%,
+      28.3% 87%,
+      28.4% 86%,
+      29% 85%,
+      31% 83.5%,
+      35.95% 81%,
+      36% 81%
+    );
+    top: 0px;
+    left: -100%;
+    right: 100%;
+    bottom: -0px;
+    z-index: 1;
 
-      .resumeLeft {
-        background-color: #6d6a6a;
-        padding: 1rem 0.5rem;
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        div {
-          .myPic {
-            border-radius: 50%;
-            border: 1px solid var(--color-mainText);
-            margin: 0.5rem 0;
-          }
-        }
-
-        .sectionTitle {
-          margin: 0.9rem 0;
-          border-bottom: 2px solid silver;
-          padding-bottom: 0.2rem;
-        }
-        .contactRow {
-          padding: 0.1rem 0;
-          font-size: 0.7rem;
-          span {
-            margin-left: 0.7rem;
-            padding: 0;
-          }
-        }
-        .eduSection {
-          font-size: 0.7rem;
-          line-height: 0.8rem;
-          margin-bottom: 0.3rem;
-          p {
-            margin: 0.1rem 0;
-          }
-          .eduRow1 {
-            padding: 0.2rem 0;
-            display: flex;
-            align-items: flex-start;
-            .eduRow1-1 {
-              width: 10%;
-            }
-            .eduRow1-2 {
-              padding-left: 0.5rem;
-              width: 85%;
-              display: inline-flex;
-              justify-content: space-between;
-              align-items: flex-start;
-              .schoolName {
-                color: rgb(223, 208, 208);
-              }
-            }
-          }
-          .eduRow2 {
-            margin-left: 1.35rem;
-          }
-        }
-      }
-      .resumeRight {
-        padding: 1rem;
-        display: inline;
-        width: 70%;
-        height: 100%;
-
-        h5 {
-          text-transform: uppercase;
-          font-weight: bolder;
-          margin-bottom: 0;
-        }
-        h6 {
-          padding-bottom: 0.5rem;
-          border-bottom: 2px solid silver;
-        }
-      }
+    @include media(xxs) {
+      display: none;
     }
   }
-}
-@media (max-width: 1206px) {
-  .resumeWrap {
-    background: radial-gradient(rgb(133, 122, 102), rgba(61, 54, 54, 0.883));
-    min-height: 80vh;
-    padding: 4rem;
+
+  .resume {
+    background-color: rgb(131, 134, 134);
+    min-width: 480px;
+    max-width: 500px;
+    min-height: 550px;
+    max-height: 650px;
+    position: relative;
+    margin-left: 15%;
+    font-family: "Cabin Condensed", sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0.5rem;
-    z-index: -1;
 
-    .resume:before {
-      content: "";
-      background-color: rgba(44, 43, 43, 0.739);
-      position: absolute;
-      clip-path: polygon(
-        43% 79%,
-        48% 78%,
-        100% 70%,
-        100% 100%,
-        33.5% 91%,
-        30.8% 90%,
-        29.5% 89%,
-        28.8% 88%,
-        28.3% 87%,
-        28.4% 86%,
-        29% 85%,
-        31% 83.5%,
-        35.95% 81%,
-        36% 81%
-      );
-      top: 0px;
-      left: -100%;
-      right: 100%;
-      bottom: -0px;
-      z-index: 1;
+    @include media(xxs) {
+      width: 95vw;
+      margin: 0;
+
+      background-color: red;
     }
-
-    .resume {
-      background-color: rgb(131, 134, 134);
+    @include media(xxl, xl, lg, md, sm, xs) {
       min-width: 480px;
       max-width: 500px;
+      margin: 0;
 
-      min-height: 550px;
-      max-height: 650px;
-      position: relative;
-      margin-left: 15%;
-      font-family: "Cabin Condensed", sans-serif;
+      background-color: blue;
+    }
+
+    .resumeLeft {
+      background-color: #6d6a6a;
+      padding: 1rem 0.5rem;
+      width: 30%;
       display: flex;
-
-      .resumeLeft {
-        background-color: #6d6a6a;
-        padding: 1rem 0.5rem;
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        div {
-          .myPic {
-            border-radius: 50%;
-            border: 1px solid var(--color-mainText);
-            margin: 0.5rem 0;
-          }
-        }
-
-        .sectionTitle {
-          margin: 0.9rem 0;
-          border-bottom: 2px solid silver;
-          padding-bottom: 0.2rem;
-        }
-        .contactRow {
-          padding: 0.1rem 0;
-          font-size: 0.7rem;
-          span {
-            margin-left: 0.7rem;
-            padding: 0;
-          }
-        }
-        .eduSection {
-          font-size: 0.7rem;
-          line-height: 0.8rem;
-          margin-bottom: 0.3rem;
-          p {
-            margin: 0.1rem 0;
-          }
-          .eduRow1 {
-            padding: 0.2rem 0;
-            display: flex;
-            align-items: flex-start;
-            .eduRow1-1 {
-              width: 10%;
-            }
-            .eduRow1-2 {
-              padding-left: 0.5rem;
-              width: 85%;
-              display: inline-flex;
-              justify-content: space-between;
-              align-items: flex-start;
-              .schoolName {
-                color: rgb(223, 208, 208);
-              }
-            }
-          }
-          .eduRow2 {
-            margin-left: 1.35rem;
-          }
+      flex-direction: column;
+      div {
+        .myPic {
+          border-radius: 50%;
+          border: 1px solid var(--color-mainText);
+          margin: 0.5rem 0;
         }
       }
-      .resumeRight {
-        padding: 1rem;
-        display: inline;
-        width: 70%;
-        height: 100%;
 
-        h5 {
-          text-transform: uppercase;
-          font-weight: bolder;
-          margin-bottom: 0;
+      .sectionTitle {
+        margin: 0.9rem 0;
+        border-bottom: 2px solid silver;
+        padding-bottom: 0.2rem;
+      }
+      .contactRow {
+        padding: 0.1rem 0;
+        font-size: 0.7rem;
+        span {
+          margin-left: 0.7rem;
+          padding: 0;
         }
-        h6 {
-          padding-bottom: 0.5rem;
-          border-bottom: 2px solid silver;
+      }
+      .eduSection {
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+        margin-bottom: 0.3rem;
+        p {
+          margin: 0.1rem 0;
         }
+        .eduRow1 {
+          padding: 0.2rem 0;
+          display: flex;
+          align-items: flex-start;
+          .eduRow1-1 {
+            width: 10%;
+          }
+          .eduRow1-2 {
+            padding-left: 0.5rem;
+            width: 85%;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .schoolName {
+              color: rgb(223, 208, 208);
+            }
+          }
+        }
+        .eduRow2 {
+          margin-left: 1.35rem;
+        }
+      }
+    }
+    .resumeRight {
+      padding: 1rem;
+      display: inline;
+      width: 70%;
+      height: 100%;
+
+      h5 {
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-bottom: 0;
+      }
+      h6 {
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid silver;
       }
     }
   }
