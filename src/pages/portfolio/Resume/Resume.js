@@ -8,9 +8,9 @@ import {
   addressIcon,
 } from "../../../components/portfolio/Resume/ResumeIcons";
 
-import dojoLogo from "../../../assets/portfolio/resume/dojoLogo.png";
-import npuLogo from "../../../assets/portfolio/resume/npuLogo.png";
-import hutechLogo from "../../../assets/portfolio/resume/hutechLogo.png";
+import dojoLogo from "../../../assets/portfolio/resume/schools/dojoLogo.png";
+import npuLogo from "../../../assets/portfolio/resume/schools/npuLogo.png";
+import hutechLogo from "../../../assets/portfolio/resume/schools/hutechLogo.png";
 const Contact = ({ icon, detail }) => {
   return (
     <div className="contactRow">
