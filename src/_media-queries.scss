@@ -5,7 +5,7 @@ $breakpoints: (
   md: 992px,
   sm: 768px,
   xs: 576px,
-  xxs: 411px,
+  xxs: 480px,
 );
 
 @mixin media($keys...) {
@@ -15,39 +15,3 @@ $breakpoints: (
     }
   }
 }
-
-// @mixin xl {
-//   @media screen and (max-width: 1400px) {
-//     @content;
-//   }
-// }
-
-// @mixin lg {
-//   @media screen and (max-width: 1200px) {
-//     @content;
-//   }
-// }
-
-// @mixin md {
-//   @media screen and (max-width: 992px) {
-//     @content;
-//   }
-// }
-
-// @mixin sm {
-//   @media screen and (max-width: 768px) {
-//     @content;
-//   }
-// }
-
-// @mixin xs {
-//   @media screen and (max-width: 576px) {
-//     @content;
-//   }
-// }
-
-// @mixin xxs {
-//   @media screen and (max-width: 411px) {
-//     @content;
-//   }
-// }
