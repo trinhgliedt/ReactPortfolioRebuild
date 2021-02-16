@@ -50,11 +50,12 @@
     min-width: 480px;
     max-width: 500px;
     min-height: 550px;
-    // max-height: 650px;
+    max-height: 650px;
     position: relative;
     margin-left: 15%;
     font-family: "Cabin Condensed", sans-serif;
     display: flex;
+    // overflow-y: scroll;
 
     @include media(xxs) {
       min-width: 95vw;
@@ -138,6 +139,10 @@
         width: 100%;
       }
 
+      .smallFont {
+        font-size: 0.7rem;
+      }
+
       h5 {
         text-transform: uppercase;
         font-weight: bolder;
@@ -146,6 +151,7 @@
       h6 {
         padding-bottom: 0.5rem;
         border-bottom: 2px solid silver;
+        border-bottom: 2px solid rgba(25, 97, 117, 0.637);
       }
     }
   }
