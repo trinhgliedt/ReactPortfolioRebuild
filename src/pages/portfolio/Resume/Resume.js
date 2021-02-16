@@ -11,6 +11,8 @@ import {
 import dojoLogo from "../../../assets/portfolio/resume/schools/dojoLogo.png";
 import npuLogo from "../../../assets/portfolio/resume/schools/npuLogo.png";
 import hutechLogo from "../../../assets/portfolio/resume/schools/hutechLogo.png";
+import VerticalTimeLine from "../../../components/portfolio/Resume/Timeline";
+
 const Contact = ({ icon, detail }) => {
   return (
     <div className="contactRow">
@@ -76,6 +78,7 @@ const Resume = () => {
           <div className="resumeRight">
             <h5 className="">Trinh Gliedt</h5>
             <h6>Resume</h6>
+            <VerticalTimeLine />
           </div>
         </div>
       </div>
