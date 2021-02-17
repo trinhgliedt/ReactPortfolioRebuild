@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles.scss";
-import resumePic from "../../../assets/portfolio/resumePic.jpg";
+import resumePic from "../../../assets/portfolio/resume/resumePic.jpg";
+import wordResume from "../../../assets/portfolio/resume/TrinhGliedt_Resume.docx";
+import pdfResume from "../../../assets/portfolio/resume/TrinhGliedt_Resume.pdf";
+import pdfLogo from "../../../assets/portfolio/resume/download/pdfLogo.png";
+import wordLogo from "../../../assets/portfolio/resume/download/wordLogo.png";
+
 import {
   phoneIcon,
   emailIcon,
@@ -39,10 +44,33 @@ const Education = ({ schoolLogo, schoolName, year, certName }) => {
 };
 
 const Resume = () => {
+  const [isOpened, setIsOpened] = useState(false);
+  const ref = useRef();
+  useOnClickOutside(ref, (isOpened) => setIsOpened(false));
+
   return (
     <div className="container">
       <h1 className="main-title text-center">Resume</h1>
       <div className="resumeWrap">
+        <div className="btnWrap">
+          <a className="downloadBtn blinkBg" onClick={(e) => setIsOpened(true)}>
+            Download full resume
+          </a>
+          <div id="hoverMenuWrap">
+            {isOpened && (
+              <div id="hoverMenu" ref={ref}>
+                <a href={pdfResume} download="resumeFile.pdf">
+                  <img src={pdfLogo} alt="pdf Logo" width="10%" />
+                  pdf
+                </a>
+                <a href={wordResume} download="resumeFile.docx">
+                  <img src={wordLogo} alt="word Logo" width="10%" />
+                  word
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
         <div className="resume">
           <div className="resumeLeft">
             <div className="d-flex justify-content-center mb-0">
@@ -87,3 +115,24 @@ const Resume = () => {
 };
 
 export default Resume;
+
+function useOnClickOutside(ref, handler) {
+  useEffect(() => {
+    const listener = (event) => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+
+      handler(event);
+    };
+
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, []);
+}

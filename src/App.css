@@ -82,3 +82,7 @@
 .deepOrangeFont {
   color: var(--color-deepOrgange);
 }
+
+.smallFont {
+  font-size: 0.7rem;
+}
