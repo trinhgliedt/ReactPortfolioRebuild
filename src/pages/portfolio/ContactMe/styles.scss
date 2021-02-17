@@ -1,0 +1,37 @@
+.contactPage {
+  div {
+    form {
+      input,
+      textarea {
+        background-color: rgba(68, 71, 68, 0.561);
+        border-radius: 3px;
+        box-shadow: none;
+        border: 1px solid grey;
+        padding: 0.6rem;
+        width: 100%;
+        margin-bottom: 0.3rem;
+        color: silver;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        background-color: rgba(33, 57, 61, 0.965);
+      }
+      div {
+        input {
+          width: 49.5%;
+          padding: 0.6rem;
+          color: silver;
+        }
+      }
+      button {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 0.2rem 2rem;
+      }
+      button:hover {
+        background-color: rgba(33, 57, 61, 0.965);
+      }
+    }
+  }
+}
