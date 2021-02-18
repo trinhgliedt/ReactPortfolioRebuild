@@ -1,9 +1,14 @@
 @import "../../../media-queries";
 
 .contactPage {
-  div {
+  #contentWrap {
+    display: flex;
+    justify-content: space-between;
+    @include media(xxs, xs, sm, md) {
+      flex-direction: column;
+    }
     form {
-      width: 50%;
+      width: 49%;
       @include media(xxs, xs, sm, md) {
         width: 100%;
       }
@@ -54,12 +59,18 @@
       button:hover {
         background-color: rgba(19, 79, 90, 0.965);
       }
-      span {
-        color: var(--color-cyan);
-        font-weight: bold;
-        font-size: 1.3rem;
-        font-family: "Caveat", cursive;
+      p {
+        height: 1rem;
+        span {
+          color: var(--color-cyan);
+          font-weight: bold;
+          font-size: 1.3rem;
+          font-family: "Caveat", cursive;
+        }
       }
+    }
+    div:nth-child(2) {
+      width: 49%;
     }
   }
 }

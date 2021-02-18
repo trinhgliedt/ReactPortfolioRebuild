@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./styles.scss";
 
 import { firestore } from "./../../../firebase/Firebase";
-
+import Map from "../../../components/portfolio/GoogleMaps/GoogleMaps";
 const ContactMe = () => {
-  const [senderName, setSenderName] = useState(null);
-  const [senderEmail, setSenderEmail] = useState(null);
-  const [subject, setSubject] = useState(null);
-  const [message, setMessage] = useState(null);
-  const [successMsg, setSuccessMsg] = useState(null);
+  const [senderName, setSenderName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
 
   const resetForm = () => {
     setSenderName("");
@@ -34,10 +34,11 @@ const ContactMe = () => {
         console.error("Error adding message to firestore db: ", err);
       });
   };
+
   return (
     <div className="container contactPage">
       <h1 className="text-center main-title py-3">Contact Me</h1>
-      <div className="row">
+      <div id="contentWrap">
         <form id="contactForm" className="" onSubmit={handleFormSubmit}>
           <div className="d-flex justify-content-between ">
             <input
@@ -73,8 +74,9 @@ const ContactMe = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
           <button type="submit">Send</button>
-          {successMsg && <span>{successMsg}</span>}
+          <p>{successMsg && <span>{successMsg}</span>}</p>
         </form>
+        <Map />} />
       </div>
     </div>
   );
