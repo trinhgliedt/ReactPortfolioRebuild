@@ -53,9 +53,12 @@ const Resume = () => {
       <h1 className="main-title text-center">Resume</h1>
       <div className="resumeWrap">
         <div className="btnWrap">
-          <a className="downloadBtn blinkBg" onClick={(e) => setIsOpened(true)}>
+          <button
+            className="downloadBtn blinkBg"
+            onClick={(e) => setIsOpened(true)}
+          >
             Download full resume
-          </a>
+          </button>
           <div id="hoverMenuWrap">
             {isOpened && (
               <div id="hoverMenu" ref={ref}>
@@ -134,5 +137,5 @@ function useOnClickOutside(ref, handler) {
       document.removeEventListener("mousedown", listener);
       document.removeEventListener("touchstart", listener);
     };
-  }, []);
+  });
 }
