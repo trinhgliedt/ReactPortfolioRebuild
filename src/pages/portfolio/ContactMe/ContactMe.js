@@ -3,6 +3,13 @@ import "./styles.scss";
 
 import { firestore } from "./../../../firebase/Firebase";
 import Map from "../../../components/portfolio/GoogleMaps/GoogleMaps";
+import {
+  phoneIcon,
+  emailIcon,
+  LinkedInIcon,
+  GitHubIcon,
+} from "../../../components/portfolio/Icons/AllIcons";
+
 const ContactMe = () => {
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
@@ -38,6 +45,18 @@ const ContactMe = () => {
   return (
     <div className="container contactPage">
       <h1 className="text-center main-title py-3">Contact Me</h1>
+      <div id="contactIconWrap">
+        <a href="tel:510-396-6601">{phoneIcon}</a>
+        <a href="mailto:chuot2008@gmail.com?subject = Hello%20Trinh%20Gliedt&body =Message%20to%20Trinh">
+          {emailIcon}
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/trinhgliedt/">
+          {LinkedInIcon}
+        </a>
+        <a target="_blank" href="https://github.com/trinhgliedt">
+          {GitHubIcon}
+        </a>
+      </div>
       <div id="contentWrap">
         <form id="contactForm" className="" onSubmit={handleFormSubmit}>
           <div className="d-flex justify-content-between ">
@@ -45,7 +64,7 @@ const ContactMe = () => {
               required
               type="text"
               name="senderName"
-              placeholder="Name"
+              placeholder="Your name"
               value={senderName}
               onChange={(e) => setSenderName(e.target.value)}
             />
@@ -53,7 +72,7 @@ const ContactMe = () => {
               required
               type="email"
               name="senderEmail"
-              placeholder="Email"
+              placeholder="Your email"
               value={senderEmail}
               onChange={(e) => setSenderEmail(e.target.value)}
             />
@@ -69,7 +88,7 @@ const ContactMe = () => {
             required
             rows="8"
             name="message"
-            placeholder="Message"
+            placeholder="If you have any request or question, feel free to call, email me or connect with me on LinkedIn. You can also send me a message using this form!"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />

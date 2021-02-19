@@ -1,6 +1,14 @@
 @import "../../../media-queries";
 
 .contactPage {
+  #contactIconWrap {
+    margin-bottom: 0.7rem;
+    margin-left: 0.5rem;
+    a {
+      margin-right: 1rem;
+      color: inherit !important;
+    }
+  }
   #contentWrap {
     display: flex;
     justify-content: space-between;
