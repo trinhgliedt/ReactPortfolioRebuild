@@ -10,7 +10,8 @@ import {
   GitHubIcon,
 } from "../../../components/portfolio/Icons/AllIcons";
 
-const ContactMe = () => {
+const ContactMe = ({ makeActivePage }) => {
+  makeActivePage("contact");
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
   const [subject, setSubject] = useState("");

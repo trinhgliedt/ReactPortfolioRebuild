@@ -1,6 +1,6 @@
 import "./App.css";
 import "./components/portfolio/Background/styles.css";
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -20,6 +20,11 @@ function App() {
   window.addEventListener("load", () => {
     LegendaryCursor.init();
   });
+  const [activePage, setActivePage] = useState("");
+
+  const makeActivePage = (activePage) => {
+    setActivePage(activePage);
+  };
 
   return (
     <>
@@ -31,8 +36,8 @@ function App() {
             exact
             path="/"
             render={() => (
-              <MainLayout>
-                <AboutMe />
+              <MainLayout {...{ activePage }}>
+                <AboutMe {...{ makeActivePage }} />
               </MainLayout>
             )}
           />
@@ -40,8 +45,8 @@ function App() {
             exact
             path="/skills"
             render={() => (
-              <MainLayout>
-                <Skills />
+              <MainLayout {...{ activePage }}>
+                <Skills {...{ makeActivePage }} />
               </MainLayout>
             )}
           />
@@ -49,8 +54,8 @@ function App() {
             exact
             path="/work"
             render={() => (
-              <MainLayout>
-                <MyWork />
+              <MainLayout {...{ activePage }}>
+                <MyWork {...{ makeActivePage }} />
               </MainLayout>
             )}
           />
@@ -58,8 +63,8 @@ function App() {
             exact
             path="/resume"
             render={() => (
-              <MainLayout>
-                <Resume />
+              <MainLayout {...{ activePage }}>
+                <Resume {...{ makeActivePage }} />
               </MainLayout>
             )}
           />
@@ -67,8 +72,8 @@ function App() {
             exact
             path="/contact"
             render={() => (
-              <MainLayout>
-                <ContactMe />
+              <MainLayout {...{ activePage }}>
+                <ContactMe {...{ makeActivePage }} />
               </MainLayout>
             )}
           />

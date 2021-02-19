@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../Logo/Logo";
 import Hamburger from "./Hamburger";
 import NavItems from "../NavItems/NavItems";
-const SideDrawer = () => {
+const SideDrawer = ({ activePage }) => {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ const SideDrawer = () => {
         <Hamburger opened={isOpened} clicked={() => setIsOpened(!isOpened)} />
       </div>
       <div className="container p-0">
-        <NavItems displayDirection="vertical" opened={isOpened} />
+        <NavItems displayDirection="vertical" opened={isOpened} activePage />
       </div>
     </div>
   );

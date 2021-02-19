@@ -1,6 +1,7 @@
 import React from "react";
 import mainPic from "./../../../assets/portfolio/mainPic.jpg";
-const AboutMe = () => {
+const AboutMe = ({ makeActivePage }) => {
+  makeActivePage("aboutMe");
   return (
     <div className="container">
       <h1 className="text-center main-title py-3"> About me </h1>

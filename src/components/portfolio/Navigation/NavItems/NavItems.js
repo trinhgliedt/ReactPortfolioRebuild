@@ -9,15 +9,41 @@ import {
 } from "../Icons";
 import "./styles.scss";
 
-var navLinks = [
-  { title: "About me", path: "/", icon: aboutMeIcon, active: true },
-  { title: "Skills", path: "/skills", icon: skillsIcon, active: false },
-  { title: "My work", path: "/work", icon: myWorkIcon, active: false },
-  { title: "Resume", path: "/resume", icon: resumeIcon, active: false },
-  { title: "Contact", path: "/contact", icon: contactMeIcon, active: false },
-];
+const NavItems = ({ displayDirection, opened, activePage }) => {
+  var navLinks = [
+    {
+      title: "About me",
+      path: "/",
+      icon: aboutMeIcon,
+      active: activePage === "aboutMe" ? true : false,
+    },
+    {
+      title: "Skills",
+      path: "/skills",
+      icon: skillsIcon,
+      active: activePage === "skills" ? true : false,
+    },
+    {
+      title: "My work",
+      path: "/work",
+      icon: myWorkIcon,
+      active: activePage === "myWork" ? true : false,
+    },
+    {
+      title: "Resume",
+      path: "/resume",
+      icon: resumeIcon,
+      active: activePage === "resume" ? true : false,
+    },
+    {
+      id: "contact",
+      title: "Contact",
+      path: "/contact",
+      icon: contactMeIcon,
+      active: activePage === "contact" ? true : false,
+    },
+  ];
 
-const NavItems = ({ displayDirection, opened }) => {
   var containerStyles;
   if (displayDirection === "vertical" && opened === true) {
     containerStyles = "navItems d-block py-3 px-lg ";

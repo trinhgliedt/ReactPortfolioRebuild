@@ -2,11 +2,11 @@ import React from "react";
 import NavigationBar from "../components/portfolio/Navigation/NavBar/NavBar";
 import Footer from "../components/portfolio/Navigation/Footer/Footer";
 
-const MainLayout = (props) => {
+const MainLayout = ({ children, activePage }) => {
   return (
     <div className="pt-0 px-0">
-      <NavigationBar />
-      {props.children}
+      <NavigationBar {...{ activePage }} />
+      {children}
       <Footer />
     </div>
   );

@@ -7,7 +7,8 @@ import aqiMapVideo from "../../../assets/portfolio/projects/_2_AQIMap.mp4";
 import letsMeetVideo from "../../../assets/portfolio/projects/_3_Let_Meet.mp4";
 import equityXVideo from "../../../assets/portfolio/projects/_4_equityX.mp4";
 
-const MyWork = (props) => {
+const MyWork = ({ makeActivePage }) => {
+  makeActivePage("myWork");
   const wrapperStyle = "col-sm-10 col-md-10 col-lg-6 col-xl-6";
   return (
     <div className="container">
