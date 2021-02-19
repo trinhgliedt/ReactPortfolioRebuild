@@ -79,11 +79,13 @@ const Resume = () => {
             <div className="d-flex justify-content-center mb-0">
               <img className="myPic" src={resumePic} width="60%" alt="resume" />
             </div>
-            <p className="sectionTitle">CONTACT</p>
-            <Contact icon={phoneIcon} detail="+1 (510) 396-6601" />
-            <Contact icon={emailIcon} detail="chuot2008@gmail.com" />
-            <Contact icon={websiteIcon} detail="http://trinhgliedt.com/" />
-            <Contact icon={addressIcon} detail="Fremont, CA, USA" />
+            <div className="hideOnMobile">
+              <p className="sectionTitle">CONTACT</p>
+              <Contact icon={phoneIcon} detail="+1 (510) 396-6601" />
+              <Contact icon={emailIcon} detail="chuot2008@gmail.com" />
+              <Contact icon={websiteIcon} detail="http://trinhgliedt.com/" />
+              <Contact icon={addressIcon} detail="Fremont, CA, USA" />
+            </div>
             <p className="sectionTitle">EDUCATION</p>
 
             <Education

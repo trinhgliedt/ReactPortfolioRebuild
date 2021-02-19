@@ -131,7 +131,10 @@
           border: 1px solid var(--color-mainText);
           margin: 0.5rem 0;
           @include media(xxs) {
-            width: 25%;
+            margin: auto;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
           }
         }
       }
@@ -141,12 +144,17 @@
         border-bottom: 2px solid silver;
         padding-bottom: 0.2rem;
       }
-      .contactRow {
-        padding: 0.1rem 0;
-        font-size: 0.7rem;
-        span {
-          margin-left: 0.7rem;
-          padding: 0;
+      .hideOnMobile {
+        @include media(xxs) {
+          display: none;
+        }
+        .contactRow {
+          padding: 0.1rem 0;
+          font-size: 0.7rem;
+          span {
+            margin-left: 0.7rem;
+            padding: 0;
+          }
         }
       }
       .eduSection {
@@ -162,6 +170,10 @@
           align-items: flex-start;
           .eduRow1-1 {
             width: 10%;
+
+            @include media(xxs) {
+              width: 15px;
+            }
           }
           .eduRow1-2 {
             padding-left: 0.5rem;
