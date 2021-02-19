@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^12.6.3",
     "bootstrap": "^4.6.0",
     "firebase": "^8.2.7",
-    "google-maps-react": "^2.0.6",
     "legendary-cursor": "^1.0.2",
     "logger": "0.0.1",
     "node-sass": "^4.14.1",

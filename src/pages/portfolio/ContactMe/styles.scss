@@ -71,6 +71,9 @@
     }
     div:nth-child(2) {
       width: 49%;
+      @include media(xxs, xs, sm, md) {
+        width: 100%;
+      }
     }
   }
 }

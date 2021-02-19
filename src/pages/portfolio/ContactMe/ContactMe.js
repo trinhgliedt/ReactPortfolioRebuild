@@ -76,7 +76,9 @@ const ContactMe = () => {
           <button type="submit">Send</button>
           <p>{successMsg && <span>{successMsg}</span>}</p>
         </form>
-        <Map />} />
+        <div>
+          <Map />
+        </div>
       </div>
     </div>
   );
