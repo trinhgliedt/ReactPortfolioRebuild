@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import myPic from "./../../../../assets/portfolio/profileThumbnail.jpg";
-import "./styles.scss";
 
 export default function logo() {
   return (

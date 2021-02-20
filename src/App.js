@@ -21,7 +21,6 @@ function App() {
     LegendaryCursor.init();
   });
   const [activePage, setActivePage] = useState("");
-
   const makeActivePage = (activePage) => {
     setActivePage(activePage);
   };

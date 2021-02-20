@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
 
 import react from "./../../../assets/portfolio/techIcons/React.png";
@@ -29,7 +29,9 @@ const sectionHeadStyle = "py-2 mt-3 sectionHead";
 const sectionStyle = "row justify-content-center tilesWrap";
 
 const Skills = ({ makeActivePage }) => {
-  makeActivePage("skills");
+  useEffect(() => {
+    makeActivePage("skills");
+  });
   return (
     <div className="container">
       <h1 className="text-center main-title py-3">Technical Skills</h1>

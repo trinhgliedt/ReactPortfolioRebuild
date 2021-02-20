@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.scss";
 
 import { firestore } from "./../../../firebase/Firebase";
@@ -11,7 +11,9 @@ import {
 } from "../../../components/portfolio/Icons/AllIcons";
 
 const ContactMe = ({ makeActivePage }) => {
-  makeActivePage("contact");
+  useEffect(() => {
+    makeActivePage("contact");
+  });
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -51,10 +53,18 @@ const ContactMe = ({ makeActivePage }) => {
         <a href="mailto:chuot2008@gmail.com?subject = Hello%20Trinh%20Gliedt&body =Message%20to%20Trinh">
           {emailIcon}
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/trinhgliedt/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/trinhgliedt/"
+        >
           {LinkedInIcon}
         </a>
-        <a target="_blank" href="https://github.com/trinhgliedt">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/trinhgliedt"
+        >
           {GitHubIcon}
         </a>
       </div>

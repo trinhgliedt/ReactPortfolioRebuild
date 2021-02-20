@@ -58,9 +58,8 @@ const NavItems = ({ displayDirection, opened, activePage }) => {
       : "px-lg-4 px-md-3 d-flex align-items-end justify-content-center";
 
   const handleClick = (index) => {
-    navLinks.map((link) => {
+    navLinks.forEach((link) => {
       link.active = false;
-      return link;
     });
     navLinks[index].active = true;
   };

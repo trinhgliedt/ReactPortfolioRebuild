@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainPic from "./../../../assets/portfolio/mainPic.jpg";
 const AboutMe = ({ makeActivePage }) => {
-  makeActivePage("aboutMe");
+  useEffect(() => {
+    makeActivePage("aboutMe");
+  });
   return (
     <div className="container">
       <h1 className="text-center main-title py-3"> About me </h1>

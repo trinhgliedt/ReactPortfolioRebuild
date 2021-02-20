@@ -4,7 +4,6 @@ import Hamburger from "./Hamburger";
 import NavItems from "../NavItems/NavItems";
 const SideDrawer = ({ activePage }) => {
   const [isOpened, setIsOpened] = useState(false);
-
   return (
     <div className="container px-2 d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
       <div className="container d-flex justify-content-between p-0">
@@ -12,7 +11,11 @@ const SideDrawer = ({ activePage }) => {
         <Hamburger opened={isOpened} clicked={() => setIsOpened(!isOpened)} />
       </div>
       <div className="container p-0">
-        <NavItems displayDirection="vertical" opened={isOpened} activePage />
+        <NavItems
+          displayDirection="vertical"
+          opened={isOpened}
+          activePage={activePage}
+        />
       </div>
     </div>
   );

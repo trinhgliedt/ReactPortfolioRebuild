@@ -12,7 +12,7 @@ const NavigationBar = ({ activePage }) => {
         {logo()}
         <NavItems {...{ activePage }} />
       </div>
-      <SideDrawer />
+      <SideDrawer {...{ activePage }} />
     </div>
   );
 };
