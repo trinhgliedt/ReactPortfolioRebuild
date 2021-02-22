@@ -6,7 +6,7 @@ import {
   myWorkIcon,
   resumeIcon,
   contactMeIcon,
-} from "../Icons";
+} from "../../../../assets/portfolio/bootstrapIcons/Icons";
 import "./styles.scss";
 
 const NavItems = ({ displayDirection, opened, activePage }) => {

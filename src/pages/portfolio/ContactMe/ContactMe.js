@@ -8,7 +8,7 @@ import {
   emailIcon,
   LinkedInIcon,
   GitHubIcon,
-} from "../../../components/portfolio/Icons/AllIcons";
+} from "../../../assets/portfolio/bootstrapIcons/Icons";
 
 const ContactMe = ({ makeActivePage }) => {
   useEffect(() => {

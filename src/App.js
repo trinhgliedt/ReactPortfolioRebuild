@@ -3,6 +3,7 @@ import "./components/portfolio/Background/styles.css";
 import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ScrollToTop from "./components/reusable/ScrollToTop";
 
 import LegendaryCursor from "legendary-cursor";
 
@@ -29,7 +30,8 @@ function App() {
     <>
       <div className="color-Bg blinkBg"></div>
       <div className="polygon-Bg"></div>
-      <div className="App p-0">
+      <div className="App p-0" id="App">
+        <ScrollToTop />
         <Switch>
           <Route
             exact

@@ -11,7 +11,7 @@ import {
   emailIcon,
   websiteIcon,
   addressIcon,
-} from "../../../components/portfolio/Resume/ResumeIcons";
+} from "../../../assets/portfolio/bootstrapIcons/Icons";
 
 import dojoLogo from "../../../assets/portfolio/resume/schools/dojoLogo.png";
 import npuLogo from "../../../assets/portfolio/resume/schools/npuLogo.png";

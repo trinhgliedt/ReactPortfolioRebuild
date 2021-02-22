@@ -10,6 +10,7 @@ import equityXVideo from "../../../assets/portfolio/projects/_4_equityX.mp4";
 const MyWork = ({ makeActivePage }) => {
   useEffect(() => {
     makeActivePage("myWork");
+    window.scroll(0, 0);
   });
   const wrapperStyle = "col-sm-10 col-md-10 col-lg-6 col-xl-6";
   return (
