@@ -1,8 +1,10 @@
-import "./App.css";
-import "./components/portfolio/Background/styles.css";
+import "./components/portfolio/Background/colorBlinkStyles.css";
+import "./components/portfolio/Background/bgStyles.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./theme/App.scss";
+
 import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/reusable/ScrollToTop";
 
 import LegendaryCursor from "legendary-cursor";

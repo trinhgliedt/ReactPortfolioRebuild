@@ -1,0 +1,39 @@
+.App {
+  height: 100vh;
+  overflow: scroll;
+  color: var(--color-mainText);
+}
+
+.main-title {
+  font-weight: 700;
+  color: var(--color-cyan);
+  font-family: "Caveat", cursive;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.lightGreenFont {
+  color: var(--lightGreenFont);
+}
+
+.orangeFont {
+  color: var(--orangeFont);
+}
+
+.purpleFont {
+  color: var(--purpleFont);
+}
+
+.yellowFont {
+  color: var(--yellowFont);
+}
+
+.deepOrangeFont {
+  color: var(--color-deepOrgange);
+}
+
+.smallFont {
+  font-size: 0.7rem;
+}

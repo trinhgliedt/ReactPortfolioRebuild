@@ -1,0 +1,17 @@
+.polygon-Bg {
+  height: 100%;
+  width: 100%;
+
+  background-image: url("./../../../assets/portfolio/bgImg.jpg");
+  background-repeat: repeat-y;
+  position: absolute;
+  clip-path: polygon(80% 0, 100% 0, 100% 50%, 55% 100%, 0 100%, 0 12%);
+  z-index: -1;
+}
+.color-Bg {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #07337e;
+  z-index: -2;
+}

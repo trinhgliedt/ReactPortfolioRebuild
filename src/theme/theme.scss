@@ -1,0 +1,45 @@
+$breakpoints: (
+  xxl: 2400px,
+  xl: 1800px,
+  lg: 1200px,
+  md: 992px,
+  sm: 768px,
+  xs: 576px,
+  xxs: 480px,
+);
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @media (max-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}
+
+* {
+  // outline: 1px solid rgb(0, 255, 213);
+}
+
+:root {
+  --color-teal: #03bd6f;
+  --color-cyan: #00e5ff;
+  --color-darkBlue: rgba(100, 66, 12, 0.609);
+  --color-deepOrgange: #ff5722;
+  --color-mainText: rgb(214, 209, 209);
+  --lightGreenFont: rgb(119, 233, 42);
+  --yellowFont: yellow;
+  --orangeFont: orange;
+  --purpleFont: rgb(235, 80, 235);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+/* font-family: "Shadows Into Light", cursive; */
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+/* font-family: "Caveat", cursive; */
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+/* font-family: 'Abel', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
+/* font-family: 'Cabin Condensed', sans-serif; */
