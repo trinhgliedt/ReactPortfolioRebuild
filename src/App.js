@@ -5,6 +5,7 @@ import "./theme/App.scss";
 
 import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 import ScrollToTop from "./components/reusable/ScrollToTop";
 
 import LegendaryCursor from "legendary-cursor";
@@ -19,7 +20,7 @@ import MyWork from "./pages/portfolio/MyWork/MyWork";
 import Resume from "./pages/portfolio/Resume/Resume";
 import ContactMe from "./pages/portfolio/ContactMe/ContactMe";
 
-function App() {
+function App(props) {
   window.addEventListener("load", () => {
     LegendaryCursor.init();
   });
@@ -39,8 +40,8 @@ function App() {
             exact
             path="/"
             render={() => (
-              <MainLayout {...{ activePage }}>
-                <AboutMe {...{ makeActivePage }} />
+              <MainLayout>
+                <AboutMe />
               </MainLayout>
             )}
           />
@@ -48,7 +49,7 @@ function App() {
             exact
             path="/skills"
             render={() => (
-              <MainLayout {...{ activePage }}>
+              <MainLayout>
                 <Skills {...{ makeActivePage }} />
               </MainLayout>
             )}
@@ -57,7 +58,7 @@ function App() {
             exact
             path="/work"
             render={() => (
-              <MainLayout {...{ activePage }}>
+              <MainLayout>
                 <MyWork {...{ makeActivePage }} />
               </MainLayout>
             )}
@@ -66,7 +67,7 @@ function App() {
             exact
             path="/resume"
             render={() => (
-              <MainLayout {...{ activePage }}>
+              <MainLayout>
                 <Resume {...{ makeActivePage }} />
               </MainLayout>
             )}
@@ -75,7 +76,7 @@ function App() {
             exact
             path="/contact"
             render={() => (
-              <MainLayout {...{ activePage }}>
+              <MainLayout>
                 <ContactMe {...{ makeActivePage }} />
               </MainLayout>
             )}
@@ -87,5 +88,7 @@ function App() {
     </>
   );
 }
-
-export default App;
+const mapStateToProps = ({ page }) => ({
+  activePage: page.activePage,
+});
+export default connect(mapStateToProps, null)(App);
