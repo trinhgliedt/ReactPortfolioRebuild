@@ -1,10 +1,5 @@
-import React, { useEffect } from "react";
-// import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import mainPic from "./../../../assets/portfolio/mainPic.jpg";
-
-// const mapState = ({ page }) => ({
-//   activePage: page.activePage,
-// });
 
 const AboutMe = () => {
   return (

@@ -3,7 +3,7 @@ import "./components/portfolio/Background/bgStyles.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./theme/App.scss";
 
-import React, { useState } from "react";
+import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import ScrollToTop from "./components/reusable/ScrollToTop";

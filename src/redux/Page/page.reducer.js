@@ -4,24 +4,13 @@ const INITIAL_STATE = {
 const pageReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "":
-      return {
-        activePage: "",
-      };
     case "skills":
-      return {
-        activePage: "skills",
-      };
     case "work":
-      return {
-        activePage: "work",
-      };
     case "resume":
-      return {
-        activePage: "resume",
-      };
     case "contact":
       return {
-        activePage: "contact",
+        ...state,
+        activePage: action.type,
       };
     default:
       return state;
