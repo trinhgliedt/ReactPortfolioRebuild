@@ -28,10 +28,7 @@ import Skill from "./../../../components/portfolio/Skill/Skill";
 const sectionHeadStyle = "py-2 mt-3 sectionHead";
 const sectionStyle = "row justify-content-center tilesWrap";
 
-const Skills = ({ makeActivePage }) => {
-  useEffect(() => {
-    makeActivePage("skills");
-  });
+const Skills = () => {
   return (
     <div className="container">
       <h1 className="text-center main-title py-3">Technical Skills</h1>

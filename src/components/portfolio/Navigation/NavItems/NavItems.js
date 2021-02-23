@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
 import {
   aboutMeIcon,
   skillsIcon,
@@ -9,13 +11,15 @@ import {
 } from "../../../../assets/portfolio/bootstrapIcons/Icons";
 import "./styles.scss";
 
-const NavItems = ({ displayDirection, opened, activePage }) => {
+const NavItems = ({ displayDirection, opened }) => {
+  const activePage = useSelector((state) => state.page.activePage);
+  const dispatch = useDispatch();
   var navLinks = [
     {
       title: "About me",
       path: "/",
       icon: aboutMeIcon,
-      active: activePage === "aboutMe" ? true : false,
+      active: activePage === "" ? true : false,
     },
     {
       title: "Skills",
@@ -27,7 +31,7 @@ const NavItems = ({ displayDirection, opened, activePage }) => {
       title: "My work",
       path: "/work",
       icon: myWorkIcon,
-      active: activePage === "myWork" ? true : false,
+      active: activePage === "work" ? true : false,
     },
     {
       title: "Resume",
@@ -62,6 +66,8 @@ const NavItems = ({ displayDirection, opened, activePage }) => {
       link.active = false;
     });
     navLinks[index].active = true;
+    const path = navLinks[index].path.slice(1);
+    dispatch({ type: path });
   };
   return (
     <div className={containerStyles}>

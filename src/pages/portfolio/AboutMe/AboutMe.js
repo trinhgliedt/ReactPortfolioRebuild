@@ -1,18 +1,12 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
 import mainPic from "./../../../assets/portfolio/mainPic.jpg";
 
-const mapState = ({ page }) => ({
-  activePage: "aboutMe",
-});
+// const mapState = ({ page }) => ({
+//   activePage: page.activePage,
+// });
 
-const AboutMe = (props) => {
-  // useEffect(() => {
-  //   makeActivePage("aboutMe");
-  // });
-
-  const dispatch = useDispatch();
-  const { activePage } = useSelector(mapState);
+const AboutMe = () => {
   return (
     <div className="container">
       <h1 className="text-center main-title py-3"> About me </h1>

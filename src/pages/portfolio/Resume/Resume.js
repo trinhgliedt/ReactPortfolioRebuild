@@ -43,10 +43,7 @@ const Education = ({ schoolLogo, schoolName, year, certName }) => {
   );
 };
 
-const Resume = ({ makeActivePage }) => {
-  useEffect(() => {
-    makeActivePage("resume");
-  });
+const Resume = () => {
   const [isOpened, setIsOpened] = useState(false);
   const ref = useRef();
   useOnClickOutside(ref, (isOpened) => setIsOpened(false));

@@ -20,14 +20,10 @@ import MyWork from "./pages/portfolio/MyWork/MyWork";
 import Resume from "./pages/portfolio/Resume/Resume";
 import ContactMe from "./pages/portfolio/ContactMe/ContactMe";
 
-function App(props) {
+function App() {
   window.addEventListener("load", () => {
     LegendaryCursor.init();
   });
-  const [activePage, setActivePage] = useState("");
-  const makeActivePage = (activePage) => {
-    setActivePage(activePage);
-  };
 
   return (
     <>
@@ -50,7 +46,7 @@ function App(props) {
             path="/skills"
             render={() => (
               <MainLayout>
-                <Skills {...{ makeActivePage }} />
+                <Skills />
               </MainLayout>
             )}
           />
@@ -59,7 +55,7 @@ function App(props) {
             path="/work"
             render={() => (
               <MainLayout>
-                <MyWork {...{ makeActivePage }} />
+                <MyWork />
               </MainLayout>
             )}
           />
@@ -68,7 +64,7 @@ function App(props) {
             path="/resume"
             render={() => (
               <MainLayout>
-                <Resume {...{ makeActivePage }} />
+                <Resume />
               </MainLayout>
             )}
           />
@@ -77,7 +73,7 @@ function App(props) {
             path="/contact"
             render={() => (
               <MainLayout>
-                <ContactMe {...{ makeActivePage }} />
+                <ContactMe />
               </MainLayout>
             )}
           />
