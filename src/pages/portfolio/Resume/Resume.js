@@ -83,7 +83,7 @@ const Resume = () => {
               <p className="sectionTitle">CONTACT</p>
               <Contact icon={phoneIcon} detail="+1 (510) 396-6601" />
               <Contact icon={emailIcon} detail="chuot2008@gmail.com" />
-              <Contact icon={websiteIcon} detail="http://trinhgliedt.com/" />
+              <Contact icon={websiteIcon} detail="https://trinhgliedt.com/" />
               <Contact icon={addressIcon} detail="Fremont, CA, USA" />
             </div>
             <p className="sectionTitle">EDUCATION</p>

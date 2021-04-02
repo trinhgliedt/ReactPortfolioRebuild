@@ -38,9 +38,20 @@ const VerticalTimeLine = () => {
         className={timeline.class}
         contentStyle={timeline.contentStyle}
         contentArrowStyle={timeline.contentArrowStyle}
-        date="Nov 2020 - Jan 2021"
+        date="Mar 2021 - current"
         dateClassName={timeline.dateClassName}
         iconStyle={timeline.iconStyleSpecial}
+      >
+        <p className={timeline.titleClass}>Software Developer</p>
+        <p className={timeline.companyClass}>CrowdFounder</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className={timeline.class}
+        contentStyle={timeline.contentStyle}
+        contentArrowStyle={timeline.contentArrowStyle}
+        date="Nov 2020 - Jan 2021"
+        dateClassName={timeline.dateClassName}
+        iconStyle={timeline.iconStyle}
       >
         <p className={timeline.titleClass}>Full Stack Developer Volunteer</p>
         <p className={timeline.companyClass}>Coding Dojo</p>
