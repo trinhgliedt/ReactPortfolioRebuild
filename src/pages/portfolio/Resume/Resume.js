@@ -62,11 +62,11 @@ const Resume = () => {
           <div id="hoverMenuWrap">
             {isOpened && (
               <div id="hoverMenu" ref={ref}>
-                <a href={pdfResume} download="resumeFile.pdf">
+                <a href={pdfResume} download="TrinhGliedtResume.pdf">
                   <img src={pdfLogo} alt="pdf Logo" width="10%" />
                   pdf
                 </a>
-                <a href={wordResume} download="resumeFile.docx">
+                <a href={wordResume} download="TrinhGliedtResume.docx">
                   <img src={wordLogo} alt="word Logo" width="10%" />
                   word
                 </a>
