@@ -8,7 +8,7 @@ const Sunflowers = () => {
     <ProjectCard
       id="2"
       title="Sunflowers"
-      projectUrl="http://18.191.91.140/"
+      // projectUrl="http://18.191.91.140/"
       imageLink={sunflowersVideo}
       description="Easy fashion shopping from the comfort of your home - You want it: You've got it!"
       technologies="Python, Django MVC, Javascript, HTML, CSS, Bootstrap"
